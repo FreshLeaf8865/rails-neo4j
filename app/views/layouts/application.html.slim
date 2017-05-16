@@ -1,0 +1,40 @@
+html
+  head
+    title Sample movies
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=>'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+    .container
+      - if notice
+          p.notice
+            = notice
+      - if alert
+          p.alert
+            = alert
+
+      .navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            a.navbar-brand href="../"  Movies sample
+            button.navbar-toggle data-target="#navbar-main" data-toggle="collapse" type="button"
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              - if user_signed_in?
+                li
+                  = link_to "Log out", destroy_user_session_path, method: :delete
+              - else
+                li
+                  = link_to "Sign up", new_user_registration_path
+                li
+                  = link_to "Log in", new_user_session_path
+      .container
+        .home-inner
+          = yield
+
+
+

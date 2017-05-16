@@ -1,0 +1,26 @@
+body.home {
+  background-color: #CCC;
+}
+
+.home-inner {
+  padding-top: 50px;
+  text-align: center;
+  .home-title {
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+  .home-features {
+    margin-bottom: 40px;
+  }
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.home-login-button {
+  margin-left: 10px;
+}

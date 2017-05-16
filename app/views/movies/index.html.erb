@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="text-center">Listing movies</h1>
+  </div>
+
+  <table class="table">
+    <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.title %></td>
+          <td><%= link_to 'Show', movie, class: 'btn btn-primary' %></td>
+          <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_movie_path(movie), class: 'btn btn-info' %></td>
+          <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <% end %>
+
+        </tr>
+    <% end %>
+  </table>
+</div>
+<% if user_signed_in? %>
+  <%= link_to 'New Movie', new_movie_path, class: 'btn btn-default' %>
+<%end %>
