@@ -1,4 +1,4 @@
-class User 
+class AppUser
   include Neo4j::ActiveNode
   #
   # Neo4j.rb needs to have property definitions before any validations. So, the property block needs to come before

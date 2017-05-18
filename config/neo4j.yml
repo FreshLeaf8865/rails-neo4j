@@ -8,4 +8,4 @@ test:
 
 production:
   type: http
-  url: http://nneo4j:z312oper@localhost:7000
+  url: http://neo4j:z312oper@localhost:7000
