@@ -1,4 +1,4 @@
-# RoR test
+# Rails-Neo4j Moview Review App
 
 Implemented:
 
