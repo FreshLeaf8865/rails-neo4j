@@ -162,7 +162,7 @@ GEM
       os
       rake
       ruby-progressbar
-      rubyzip (>= 1.1.7)
+      rubyzip (>= 1.2.1)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
